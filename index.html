@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SQUARE DESIGNS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+  <style>
+    /* CSS variables for consistent theming */
+    :root {
+      --color-bg: transparent;
+      --color-text: #374151; /* cool gray 700 */
+      --color-text-muted: #ffffff; /* white 500 */
+      --color-primary: #111827; /* gray 900 */
+      --color-accent: #3b82f6; /* light blue 500 */
+      --font-headline: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Container for max width and center alignment */
+    .container {
+      background-image:url(pic.png);
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1rem;
+    }
+   
+    /* Sticky navbar with transparent background and subtle blur */
+    nav.navbar {
+      position: relative;
+      z-index: 1000;
+      background: var(transparent);
+      animation: slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      transform: translateY(-100%);
+    }
+
+    /* Slide down keyframe animation */
+    @keyframes slideDown {
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width : 800px) {
+        .nav-item{
+            display:none;
+        }
+        .navbar{
+          background-color: #0000004a;
+          height: 2.5cm;
+        }
+        
+    }
+    
+    @media (min-width : 800px) {
+        .nav-ite{
+            display:none;
+        }
+        
+    }
+
+    /* Navbar inner flex container */
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    /* Logo styling */
+    .navbar-logo {
+     min-width: 0cm;
+     min-height: 0cm;
+     padding-right: 2cm;
+     filter: drop-shadow(3px 3px 2px #000000f8);
+    }
+
+    /* Navigation menu */
+    .navbar-menu {
+      display: flex;
+      margin-left: auto;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      z-index: 1100;
+    }
+
+    /* Nav item base style */
+    .nav-item {
+      position: relative;
+      color: var(--color-text-muted);
+      text-shadow: 5px 5px 5px #000000f8;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+      outline: none;
+    }
+    .nav-item:hover,
+    .nav-item:focus-visible {
+      color: var(--color-accent);
+      transform: scale(1.08);
+      /* Removed outline for minimal style */
+    }
+
+    /* Remove underline animation */
+    .nav-item::after {
+      content: none;
+    }
+
+    /* Responsive - collapse gap on smaller widths */
+    @media (max-width: 640px) {
+      .navbar-inner {
+        padding: 0 0.5rem;
+      }
+    }
+      .nav-itm:hover,
+    .nav-itm:focus-visible {
+      color: var(--color-accent);
+      transform: scale(1.08);
+      /* Removed outline for minimal style */
+    }
+
+    /* Remove underline animation */
+    .nav-itm::after {
+      content: none;
+    }
+    .nav-itm {
+        font-size: 0.95rem;
+      }
+
+      .nav-item {
+        font-size: 0.95rem;
+      }
+    
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+  .heading-container {
+    max-width: 1200px;
+
+    text-align: center;
+  }
+  .head {
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-align: justify;
+    text-shadow: 2px 2px 5px #000000f8;
+    color: #fbffff;
+    margin: 0;
+    opacity: 0;
+    padding-left: 0.3cm;
+    animation: slideFromTop 0.8s ease forwards;
+  }
+  
+.head:hover,
+   .head:focus-visible{
+    transform: scale(1.08);
+}
+.head::after {
+    content: none;
+}
+
+  @keyframes slideFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <img style="width:80px;height: 80px;" class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
+    </div>
+    <!-- Spinner End -->
+  
+    <!-- Navbar Start -->
+    
+  <div class="bg1" style="background-image: url(img/pic.jpg);min-height: 100vh;background-position: center;background-size: cover;position: relative;"> 
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-inner">
+        <a href="index.html" class="navbar-logo" aria-label="Homepage"><img style="width: 120px;height: 120px;" src="img/icons/logo.png" alt=""></a>
+        <div class="navbar-menu" role="menubar" aria-label="Primary menu">
+         <a href="index.html" class="nav-item" role="menuitem" tabindex="0">Home</a>
+         <a href="service.html" class="nav-item" role="menuitem" tabindex="0">Services</a>
+         <a href="about.html" class="nav-item" role="menuitem" tabindex="0">About</a>
+         <a href="project.html" class="nav-item" role="menuitem" tabindex="0">Projects</a>
+         <a href="contact.html" class="nav-item" role="menuitem" tabindex="0">Contact</a>
+         <a href="#" class="nav-ite" style="margin-top: auto;margin-right: auto;" role="menuitem" tabindex="0" onclick=showsidebar()><img  style="filter: drop-shadow(2px 2px 5px #000000f8);"  src="img/icons/menu.png" alt=""></a>
+        </div> 
+          <div class="sidebar" style="display: none;position: fixed;top: 0;right:0;height: 100vh;width: 250px;z-index:999;
+        background-color: rgba(0, 0, 0, 0.54);
+        backdrop-filter: blur(10px);
+        box-shadow: #bcc1ca;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;"
+        >
+        <a href="#">&nbsp;</a>
+        <a href="#" onclick=hidesidebar() class="nav-itm" style="width: 100%;color: var(--color-text-muted);cursor: pointer;transition: color 0.3s ease, transform 0.3s ease;outline: none;align-items: center;justify-content: space-between;height: 64px;padding: 0 1rem;"><img src="img/icons/close.png" alt=""></a>
+         <a href="#" class="nav-itm" style="width: 100%;color: var(--color-text-muted);cursor: pointer;transition: color 0.3s ease, transform 0.3s ease;outline: none;align-items: center;justify-content: space-between;height: 64px;padding: 0 1rem;"><b>Home</b></a>
+         <a href="#" class="nav-itm" style="width: 100%;color: var(--color-text-muted);cursor: pointer;transition: color 0.3s ease, transform 0.3s ease;outline: none;align-items: center;justify-content: space-between;height: 64px;padding: 0 1rem;"><b>Features</b></a>
+         <a href="#" class="nav-itm" style="width: 100%;color: var(--color-text-muted);cursor: pointer;transition: color 0.3s ease, transform 0.3s ease;outline: none;align-items: center;justify-content: space-between;height: 64px;padding: 0 1rem;"><b>Pricing</b></a>
+         <a href="#" class="nav-itm" style="width: 100%;color: var(--color-text-muted);cursor: pointer;transition: color 0.3s ease, transform 0.3s ease;outline: none;align-items: center;justify-content: space-between;height: 64px;padding: 0 1rem;"><b>Docs</b></a>
+         <a href="#" class="nav-itm" style="width: 100%;color: var(--color-text-muted);cursor: pointer;transition: color 0.3s ease, transform 0.3s ease;outline: none;align-items: center;justify-content: space-between;height: 64px;padding: 0 1rem;"><b>About</b></a>
+    </div>       
+    </div>
+    </nav>
+  
+        <div class="box" style="padding-left:2.4cm ;padding-top: 6.5cm;color: #111827;width: 500px;">
+          <div class="head"></div>
+            <a href="#"><h1 class="head" style="padding-left: 0.8cm;"> Our Design </h1></a>
+            <a href="#"><h1 class="head" style="height: 200px;width:300px;"> Your Dream  !</h1></a>
+          </div>
+        </div>   
+     </div>
+  </div>
+  
+
+    <!-- Navbar End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;"><br><br>
+                <h4 class="section-title">Why Choose Us!</h4>
+                <h1 class="display-5 mb-4">Why You Should Trust Us?</h1>
+            </div>
+        </div>
+        <div class="container pt-5"><br>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/icons/icon-2.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Design Approach</h3>
+                        <p class="mb-0" style="color: #111827b4;">We craft timeless, functional spaces through a seamless blend of innovative designs tailored to our clients vision and lifestyle.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/icons/icon-3.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Innovative Solutions</h3>
+                        <p class="mb-0" style="color: #111827b4;">We deliver innovative design solutions that merge creativity with cutting-edge technology to transform spaces with purpose and style.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/icons/icon-4.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Project Management</h3>
+                        <p class="mb-0" style="color: #111827b4;">Our exceptional project management ensures smooth, efficient, and delivered on time with uncompromised quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s" style="max-height: 100px;">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-1.jpg'>">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Best Architecture And Interior Design Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Craft timeless, functional spaces through a seamless blend of innovative interior and exterior design tailored to our clients vision and lifestyle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-2.jpg'>">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Best Architecture And Interior Design Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Craft timeless, functional spaces through a seamless blend of innovative interior and exterior design tailored to our clients vision and lifestyle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-3.jpg'>">
+                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Best Architecture And Interior Design Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Craft timeless, functional spaces through a seamless blend of innovative interior and exterior design tailored to our clients vision and lifestyle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container"><br><br>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Services</h4>
+                <h1 class="display-5 mb-4">We Focused On Modern Architecture And Interior Design</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-1.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-5.png" alt="Icon">
+                            <h3 class="mb-3">Exterior Design</h3>
+                            <p class="mb-4">Transform your space with our stunning exterior designs.</p>
+                            <a class="btn" href="contact.html"><i class="fa fa-plus text-primary me-3"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-2.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-6.png" alt="Icon">
+                            <h3 class="mb-3">3D Animation</h3>
+                            <p class="mb-4">Bring your ideas to life with our high-quality 3D animation.</p>
+                            <a class="btn" href="contact.html"><i class="fa fa-plus text-primary me-3"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-3.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-7.png" alt="Icon">
+                            <h3 class="mb-3">2D Animation</h3>
+                            <p class="mb-4">Make your story shine with our vibrant and engaging 2D animation.</p>
+                            <a class="btn" href="contact.html"><i class="fa fa-plus text-primary me-3"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-4.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-8.png" alt="Icon">
+                            <h3 class="mb-3">Interior Design</h3>
+                            <p class="mb-4">Elevate your space with our stylish and personalized interior design.</p>
+                            <a class="btn" href="contact.html"><i class="fa fa-plus text-primary me-3"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-5.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-9.png" alt="Icon">
+                            <h3 class="mb-3">Furnitures</h3>
+                            <p class="mb-4">Enhance your space with our stylish and custom-crafted furniture.</p>
+                            <a class="btn" href="contact.html"><i class="fa fa-plus text-primary me-3"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-6.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-10.png" alt="Icon">
+                            <h3 class="mb-3">Curtains & Blinds</h3>
+                            <p class="mb-4">Elevate your windows with our elegant, custom-designed curtains and blinds.</p>
+                            <a class="btn" href="contact.html"><i class="fa fa-plus text-primary me-3"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title">About Us!</h4>
+                    <h1 class="display-5 mb-4">A Creative Architecture Agency For Your Dream Home !</h1>
+                    <p class="mb-4" style="color: #111827b4;">We believe that where you live matters a lot. Your home is more than just an asset. It should make sense. Have all modern conveniences but stay true to its original beauty and heritage.</p><br>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-2.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3> Best Design Approach</h3>
+                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-3.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Greatest Innovative Solutions</h3>
+                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-4.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Experionced Project Management</h3>
+                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="img/about-2.jpg" alt="">
+                        <img class="img-fluid" src="img/about-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Project Start -->
+    <div class="container-xxl project py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Projects</h4>
+                <h1 class="display-5 mb-4">Visit Our Latest Projects And Our Innovative Works</h1>
+            </div>
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4">
+                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                            <h3 class="m-0">01. Contemporary Homes</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                            <h3 class="m-0">02. Resorts</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                            <h3 class="m-0">03. Bedrooms</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                            <h3 class="m-0">04. Bathrooms</h3>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content w-100">
+                        <div class="tab-pane fade show active" id="tab-pane-1">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-1.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                   <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-1.1.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-2">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-2.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-2.2.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-3">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-3.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-3.3.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-4.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-4.4.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Team Members</h4>
+                <h1 class="display-5 mb-4">We Are Creative Architecture Team For Your Dream Home</h1>
+            </div>
+            <div class="row g-0 team-items">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.facebook.com/seby.francis.319?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com/seby5204?igsh=ZW0wb2dlZDh1c3Zl"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Seby</h3>
+                            <span class="text-primary">Site Supervisor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.facebook.com/husain.asif.79?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com/asif_huss_ain__?igsh=MTd0ZDY3dmxydGVhaQ=="><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Asif</h3>
+                            <span class="text-primary">General Manager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.facebook.com/profile.php?id=100082491956685&mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com/nikkill__?igsh=c3k5bmthaTFhanU3"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Nikhil</h3>
+                            <span class="text-primary">Managing Director</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="https://www.facebook.com/jeo.jose.77?mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com/jeo.jose.77?igsh=MThuZXRmMm1ndGZsYg=="><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Jeo</h3>
+                            <span class="text-primary">Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Testimonial</h4>
+                <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
+                    <p class="fs-5" style="color: #111827b4;">"Square Designs completely transformed our space into a stunning and functional masterpiece."</p>
+                    <h3>Anisha George</h3>
+                    <span class="text-primary">Tax Accountant</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
+                    <p class="fs-5" style="color: #111827b4;">"Exceptional attention to detail and a perfect blend of style and practicality!Square designs is perfect."</p>
+                    <h3>Jithin Jacob</h3>
+                    <span class="text-primary">General Manager</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
+                    <p class="fs-5" style="color: #111827b4;">"From concept to completion, Square designs delivered beyond our expectations with flawless execution."</p>
+                    <h3>Renjith R Nair</h3>
+                    <span class="text-primary">Entrepreneur</span>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Kochi,Thrissur</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>8891066654</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>9656245111</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1" href="https://www.instagram.com/squaredesignstudio666?igsh=MnhvamszM3IzN3cy"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href="https://in.linkedin.com/in/square-design-79a91936b"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Quick Links</h3>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <a class="btn btn-link" href="project.html">Projects</a>
+                    <a class="btn btn-link" href="index.html">Homepage</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Services</h3>
+                    <a class="btn btn-link" href="service.html">Exterior Design</a>
+                    <a class="btn btn-link" href="service.html">3D Animation</a>
+                    <a class="btn btn-link" href="service.html">Furnitures</a>
+                    <a class="btn btn-link" href="service.html">Interior Design</a>
+                    <a class="btn btn-link" href="service.html">Blinds and Curtains</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Get In Touch</h3>
+                    <a class="btn btn-link" href="https://www.instagram.com/seby5204?igsh=ZW0wb2dlZDh1c3Zl">Sebi Francis</a>
+                    <a class="btn btn-link" href="https://www.instagram.com/asif_huss_ain__?igsh=MTd0ZDY3dmxydGVhaQ==">Asif Hussain</a>
+                    <a class="btn btn-link" href="https://www.instagram.com/nikkill__?igsh=c3k5bmthaTFhanU3">Nikkil M B</a>
+                    <a class="btn btn-link" href="https://www.instagram.com/jeo.jose.77?igsh=MThuZXRmMm1ndGZsYg==">Jeo Jose</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="index.html">SQUARE DESIGNS</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script>
+        function showsidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+            const navite = document.querySelector('.nav-ite')
+            navite.style.display = 'none'
+        }
+        function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+            const navite = document.querySelector('.nav-ite')
+            navite.style.display = 'flex'
+        }
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
